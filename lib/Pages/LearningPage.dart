@@ -17,6 +17,16 @@ class _LearningPageState extends State<LearningPage> {
             height: 5,
           ),
           LearningItem(
+            icon: Feather.code,
+            name: "Algorithms & Structures",
+            color: Colors.amber,
+          ),
+          LearningItem(
+            icon: MaterialCommunityIcons.lock_pattern,
+            name: "Design Patterns",
+            color: Colors.indigo,
+          ),
+          LearningItem(
             icon: FontAwesome5Brands.java,
             name: "Java",
             color: Colors.red,
@@ -30,6 +40,11 @@ class _LearningPageState extends State<LearningPage> {
             icon: FontAwesome5Brands.python,
             name: "Python",
             color: Colors.green,
+          ),
+          LearningItem(
+            icon: SimpleLineIcons.wrench,
+            name: "Assembly",
+            color: Colors.teal,
           ),
           LearningItem(
             icon: FontAwesome5Brands.html5,
@@ -47,9 +62,14 @@ class _LearningPageState extends State<LearningPage> {
             color: Colors.yellow,
           ),
           LearningItem(
-            icon: AntDesign.smileo,
+            icon: AntDesign.google,
             name: "Dart/Flutter",
             color: Colors.blueAccent,
+          ),
+          LearningItem(
+            icon: AntDesign.facebook_square,
+            name: "React Native",
+            color: Colors.lightBlueAccent,
           ),
           LearningItem(
             icon: AntDesign.android1,

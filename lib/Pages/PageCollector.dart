@@ -49,7 +49,78 @@ class _PageCollectorState extends State<PageCollector> {
         ],
       ),
       body: _bodies[_currentIndex],
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: 300,
+              child: Center(
+                child: Text(
+                  "Codergram",
+                  style: TextStyle(fontSize: 46),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 50,
+                child: Center(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Feather.info),
+                      Container(
+                        width: 10,
+                      ),
+                      Text("About"),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 50,
+                child: Center(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(EvilIcons.pencil),
+                      Container(
+                        width: 10,
+                      ),
+                      Text("Writers"),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 50,
+                child: Center(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(FontAwesome.money),
+                      Container(
+                        width: 10,
+                      ),
+                      Text("Support"),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       // bottomNavigationBar: BottomNavigationBar(
       //   backgroundColor: Colors.blueGrey,
       //   currentIndex: _currentIndex,

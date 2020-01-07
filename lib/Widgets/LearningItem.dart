@@ -13,7 +13,7 @@ class LearningItem extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.all(5),
         width: MediaQuery.of(context).size.width - 10,
-        height: 200,
+        height: 150,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(16),
@@ -24,7 +24,7 @@ class LearningItem extends StatelessWidget {
           children: <Widget>[
             Icon(
               icon,
-              size: 56,
+              size: 42,
             ),
             Container(
               height: 15,
@@ -32,7 +32,7 @@ class LearningItem extends StatelessWidget {
             Text(
               name,
               style: TextStyle(
-                fontSize: 32,
+                fontSize: 28,
               ),
             ),
           ],
