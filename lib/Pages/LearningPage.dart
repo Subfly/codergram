@@ -10,43 +10,52 @@ class LearningPage extends StatefulWidget {
 class _LearningPageState extends State<LearningPage> {
   @override
   Widget build(BuildContext context) {
-    return GridView.extent(
-      maxCrossAxisExtent: 200.0,
-      shrinkWrap: true,
-      children: <Widget>[
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-        LearningItem(
-          icon: FontAwesome5Brands.java,
-          name: "Java",
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 5,
+          ),
+          LearningItem(
+            icon: FontAwesome5Brands.java,
+            name: "Java",
+            color: Colors.red,
+          ),
+          LearningItem(
+            icon: Ionicons.logo_javascript,
+            name: "Javascript",
+            color: Colors.yellow,
+          ),
+          LearningItem(
+            icon: FontAwesome5Brands.html5,
+            name: "HTML",
+            color: Colors.orange,
+          ),
+          LearningItem(
+            icon: FontAwesome5Brands.css3,
+            name: "CSS",
+            color: Colors.blue,
+          ),
+          LearningItem(
+            icon: FontAwesome.microchip,
+            name: "C/C++/C#",
+            color: Colors.blueGrey,
+          ),
+          LearningItem(
+            icon: AntDesign.smileo,
+            name: "Dart/Flutter",
+            color: Colors.blueAccent,
+          ),
+          LearningItem(
+            icon: FontAwesome5Brands.python,
+            name: "Python",
+            color: Colors.green,
+          ),
+          Container(
+            height: 10,
+          )
+        ],
+      ),
     );
   }
 }
