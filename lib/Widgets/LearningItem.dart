@@ -22,8 +22,19 @@ class LearningItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Icon(icon),
-            Text(name),
+            Icon(
+              icon,
+              size: 56,
+            ),
+            Container(
+              height: 15,
+            ),
+            Text(
+              name,
+              style: TextStyle(
+                fontSize: 32,
+              ),
+            ),
           ],
         ),
       ),

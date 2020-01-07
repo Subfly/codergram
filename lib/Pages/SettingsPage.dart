@@ -12,7 +12,8 @@ class _SettingPageState extends State<SettingPage> {
       appBar: AppBar(
         title: Text("Settings"),
         centerTitle: true,
-        backgroundColor: Color(0xFF016FB9),
+        //backgroundColor: Color(0xFF016FB9),
+        backgroundColor: Color(0xFF353531),
       ),
     );
   }

@@ -22,9 +22,14 @@ class _LearningPageState extends State<LearningPage> {
             color: Colors.red,
           ),
           LearningItem(
-            icon: Ionicons.logo_javascript,
-            name: "Javascript",
-            color: Colors.yellow,
+            icon: FontAwesome.microchip,
+            name: "C/C++/C#",
+            color: Colors.blueGrey,
+          ),
+          LearningItem(
+            icon: FontAwesome5Brands.python,
+            name: "Python",
+            color: Colors.green,
           ),
           LearningItem(
             icon: FontAwesome5Brands.html5,
@@ -37,9 +42,9 @@ class _LearningPageState extends State<LearningPage> {
             color: Colors.blue,
           ),
           LearningItem(
-            icon: FontAwesome.microchip,
-            name: "C/C++/C#",
-            color: Colors.blueGrey,
+            icon: Ionicons.logo_javascript,
+            name: "Javascript",
+            color: Colors.yellow,
           ),
           LearningItem(
             icon: AntDesign.smileo,
@@ -47,9 +52,14 @@ class _LearningPageState extends State<LearningPage> {
             color: Colors.blueAccent,
           ),
           LearningItem(
-            icon: FontAwesome5Brands.python,
-            name: "Python",
+            icon: AntDesign.android1,
+            name: "Kotlin/Android",
             color: Colors.green,
+          ),
+          LearningItem(
+            icon: AntDesign.apple_o,
+            name: "Swift/IOS",
+            color: Colors.grey,
           ),
           Container(
             height: 10,
