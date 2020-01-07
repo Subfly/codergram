@@ -13,7 +13,7 @@ class _PageCollectorState extends State<PageCollector> {
   int _currentIndex = 0;
   final List<String> _pageNames = [
     "Codergram",
-    //"Learn",
+    "Learn",
     "Editor",
   ];
   final List<Color> _colors = [
