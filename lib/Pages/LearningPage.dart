@@ -61,9 +61,14 @@ class _LearningPageState extends State<LearningPage> {
             name: "Swift/IOS",
             color: Colors.grey,
           ),
+          LearningItem(
+            icon: MaterialCommunityIcons.palette_outline,
+            name: "UI/UX",
+            color: Colors.pink,
+          ),
           Container(
             height: 10,
-          )
+          ),
         ],
       ),
     );
