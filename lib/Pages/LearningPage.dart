@@ -59,7 +59,7 @@ class _LearningPageState extends State<LearningPage> {
           LearningItem(
             icon: Ionicons.logo_javascript,
             name: "Javascript",
-            color: Colors.yellow,
+            color: Colors.yellow.shade700,
           ),
           LearningItem(
             icon: AntDesign.google,

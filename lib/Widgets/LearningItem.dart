@@ -1,3 +1,4 @@
+import 'package:codergram/Pages/GeneralPageArchitecture.dart';
 import 'package:flutter/material.dart';
 
 class LearningItem extends StatelessWidget {
@@ -9,7 +10,18 @@ class LearningItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        return Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => GeneralPageArchitecture(
+              color: color,
+              title: name,
+              icon: icon,
+            ),
+          ),
+        );
+      },
       child: Container(
         margin: EdgeInsets.all(5),
         width: MediaQuery.of(context).size.width - 10,

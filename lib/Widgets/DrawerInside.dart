@@ -24,6 +24,25 @@ class DrawerInside extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Icon(Feather.star),
+                  Container(
+                    width: 10,
+                  ),
+                  Text("Quick Accsess"),
+                ],
+              ),
+            ),
+          ),
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            height: 50,
+            child: Center(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
                   Icon(Feather.info),
                   Container(
                     width: 10,
