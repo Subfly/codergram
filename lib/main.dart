@@ -1,8 +1,9 @@
 import 'package:codergram/Pages/PageCollector.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-main(List<String> args) {
-  runApp(Codergram());
+void main(List<String> args) {
+  runApp(new Codergram());
 }
 
 class Codergram extends StatefulWidget {

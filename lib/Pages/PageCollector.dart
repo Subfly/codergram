@@ -1,4 +1,4 @@
-import 'package:codergram/Pages/LearningPage.dart';
+import 'package:codergram/Pages/HomePage.dart';
 import 'package:codergram/Pages/SettingsPage.dart';
 import 'package:codergram/Widgets/DrawerInside.dart';
 import 'package:flutter/material.dart';
@@ -11,35 +11,35 @@ class PageCollector extends StatefulWidget {
 
 class _PageCollectorState extends State<PageCollector> {
   GlobalKey<ScaffoldState> _scaffKey = GlobalKey<ScaffoldState>();
-  int _currentIndex = 0;
-  final List<String> _pageNames = [
-    "Codergram",
-    "Learn",
-    "Editor",
-  ];
-  final List<Color> _colors = [
-    Color(0xFF353531),
-    Color(0XFFEC4E20),
-    Color(0XFFFF9505),
-  ];
-  final List<Widget> _bodies = [
-    LearningPage(),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffKey,
       appBar: AppBar(
-        backgroundColor: _colors[_currentIndex],
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        brightness: Brightness.light,
         leading: IconButton(
-          icon: Icon(Feather.menu),
+          icon: Icon(
+            Feather.menu,
+            color: Colors.blueGrey,
+          ),
           onPressed: () => _scaffKey.currentState.openDrawer(),
         ),
-        title: Text("${_pageNames[_currentIndex]}"),
+        title: Text(
+          "Codergram",
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: Colors.blueGrey,
+          ),
+        ),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Feather.settings),
+            icon: Icon(
+              Feather.settings,
+              color: Colors.blueGrey,
+            ),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -49,40 +49,10 @@ class _PageCollectorState extends State<PageCollector> {
           )
         ],
       ),
-      body: _bodies[_currentIndex],
+      body: HomePage(),
       drawer: Drawer(
         child: DrawerInside(),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   backgroundColor: Colors.blueGrey,
-      //   currentIndex: _currentIndex,
-      //   onTap: (i) {
-      //     setState(() {
-      //       _currentIndex = i;
-      //     });
-      //   },
-      //   selectedItemColor: Colors.white,
-      //   elevation: 10,
-      //   type: BottomNavigationBarType.shifting,
-      //   showSelectedLabels: false,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Feather.home),
-      //       title: Text("Home"),
-      //       backgroundColor: _colors[_currentIndex],
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Feather.code),
-      //       title: Text("Learn"),
-      //       backgroundColor: _colors[_currentIndex],
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Octicons.comment_discussion),
-      //       title: Text("Editor"),
-      //       backgroundColor: _colors[_currentIndex],
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
