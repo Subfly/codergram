@@ -1,23 +1,23 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:codergram/Pages/LearningPage.dart';
+import 'package:codergram/Pages/SlackPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-class LearnWidget extends StatefulWidget {
+class SlackWidget extends StatefulWidget {
   @override
-  _LearnWidgetState createState() => _LearnWidgetState();
+  _SlackWidgetState createState() => _SlackWidgetState();
 }
 
-class _LearnWidgetState extends State<LearnWidget> {
-  IconData _currentIcon = Feather.code;
+class _SlackWidgetState extends State<SlackWidget> {
+  IconData _currentIcon = FontAwesome5Brands.slack;
   List<String> _items = [
-    "Learn",
-    "Improve",
-    "Java",
-    "C++",
-    "Python",
-    "UI / UX",
-    "Tap Here"
+    "Slack",
+    "Develop",
+    "Discuss",
+    "Organize",
+    "Create",
+    "Tap for More",
   ];
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _LearnWidgetState extends State<LearnWidget> {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => new LearningPage(),
+          builder: (_) => new SlackPage(),
         ),
       ),
       child: Card(
@@ -40,6 +40,11 @@ class _LearnWidgetState extends State<LearnWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
+              Icon(
+                _currentIcon,
+                size: 52,
+                color: Colors.white,
+              ),
               Container(
                 width: MediaQuery.of(context).size.width - 250,
                 child: FadeAnimatedTextKit(
@@ -52,11 +57,6 @@ class _LearnWidgetState extends State<LearnWidget> {
                   ),
                   totalRepeatCount: 12323213,
                 ),
-              ),
-              Icon(
-                _currentIcon,
-                size: 52,
-                color: Colors.white,
               ),
             ],
           ),

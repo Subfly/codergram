@@ -1,21 +1,22 @@
 import 'package:codergram/Pages/CalendarPage.dart';
+import 'package:codergram/Pages/MailPage.dart';
 import 'package:codergram/Pages/NotesPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-class CalendarWidget extends StatefulWidget {
+class MailWidget extends StatefulWidget {
   @override
-  _CalendarWidgetState createState() => _CalendarWidgetState();
+  _MailWidgetState createState() => _MailWidgetState();
 }
 
-class _CalendarWidgetState extends State<CalendarWidget> {
+class _MailWidgetState extends State<MailWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => new CalendarPage(),
+          builder: (_) => new MailPage(),
         ),
       ),
       child: Card(
@@ -31,7 +32,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Icon(
-                FontAwesome.calendar_check_o,
+                Feather.mail,
                 size: 52,
                 color: Colors.white,
               ),
@@ -39,7 +40,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                 height: 10,
               ),
               Text(
-                "Calendar",
+                "Mails",
                 style: TextStyle(
                   fontSize: 25,
                   color: Colors.white,

@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main(List<String> args) {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, //top bar color
+      statusBarIconBrightness: Brightness.dark, //top bar icons
+      systemNavigationBarColor: Colors.white, //bottom bar color
+      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+    )
+  );
   runApp(new Codergram());
 }
 

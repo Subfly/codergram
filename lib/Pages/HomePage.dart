@@ -1,6 +1,9 @@
 import 'package:codergram/Widgets/CalendarWidget.dart';
 import 'package:codergram/Widgets/LearnWidget.dart';
+import 'package:codergram/Widgets/MailWidget.dart';
 import 'package:codergram/Widgets/NotesWidget.dart';
+import 'package:codergram/Widgets/SlackWidget.dart';
+import 'package:codergram/Widgets/TimerWidget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,8 +24,17 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              NoteWidget(),
+              MailWidget(),
               CalendarWidget(),
+            ],
+          ),
+          SlackWidget(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              NoteWidget(),
+              TimerWidget(),
             ],
           ),
         ],

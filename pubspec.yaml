@@ -25,6 +25,12 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_icons: ^1.0.0+1
   animated_text_kit: ^2.0.0
+  auto_animated: ^2.0.0
+  flutter_native_splash: ^0.1.9
+  zefyr: ^0.9.1
+  uuid: ^2.0.4
+  path_provider: ^1.5.1
+  table_calendar: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -64,3 +70,9 @@ fonts:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_native_splash:
+  image: assets/images/splash.png
+  color: "607d8b"
+  android_disable_fullscreen: true
+  fill: true
