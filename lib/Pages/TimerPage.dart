@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-class SettingPage extends StatefulWidget {
+class TimerPage extends StatefulWidget {
   @override
-  _SettingPageState createState() => _SettingPageState();
+  _TimerPageState createState() => _TimerPageState();
 }
 
-class _SettingPageState extends State<SettingPage> {
+class _TimerPageState extends State<TimerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Settings",
+          "Timer",
           style: TextStyle(
             color: Colors.blueGrey,
           ),

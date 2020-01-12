@@ -1,6 +1,8 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:codergram/Pages/CalendarPage.dart';
 import 'package:codergram/Pages/MailPage.dart';
 import 'package:codergram/Pages/NotesPage.dart';
+import 'package:codergram/Pages/TimerPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -10,13 +12,19 @@ class TimerWidget extends StatefulWidget {
 }
 
 class _TimerWidgetState extends State<TimerWidget> {
+  List<String> _items = [
+    "Timer",
+    "Break",
+    "Relax",
+    "Calc.",
+  ];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => new MailPage(),
+          builder: (_) => TimerPage(),
         ),
       ),
       child: Card(
@@ -39,13 +47,19 @@ class _TimerWidgetState extends State<TimerWidget> {
               Container(
                 height: 10,
               ),
-              Text(
-                "Timer",
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
+              Container(
+                child: FadeAnimatedTextKit(
+                  duration: Duration(milliseconds: 1800),
+                  isRepeatingAnimation: true,
+                  text: _items,
+                  textStyle: TextStyle(
+                    fontSize: 36.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  totalRepeatCount: 12323213,
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:codergram/Pages/CalendarPage.dart';
 import 'package:codergram/Pages/NotesPage.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,12 @@ class CalendarWidget extends StatefulWidget {
 }
 
 class _CalendarWidgetState extends State<CalendarWidget> {
+  List<String> _items = [
+    "Calendar",
+    "Schedule",
+    "Events",
+    "Organize",
+  ];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -38,13 +45,19 @@ class _CalendarWidgetState extends State<CalendarWidget> {
               Container(
                 height: 10,
               ),
-              Text(
-                "Calendar",
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
+              Container(
+                child: FadeAnimatedTextKit(
+                  duration: Duration(milliseconds: 1500),
+                  isRepeatingAnimation: true,
+                  text: _items,
+                  textStyle: TextStyle(
+                    fontSize: 36.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  totalRepeatCount: 12323213,
                 ),
-              )
+              ),
             ],
           ),
         ),

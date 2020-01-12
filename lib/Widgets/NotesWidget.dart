@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:codergram/Pages/NotesPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -8,6 +9,11 @@ class NoteWidget extends StatefulWidget {
 }
 
 class _NoteWidgetState extends State<NoteWidget> {
+  List<String> _items = [
+    "Notes",
+    "To-Do",
+    "Check",
+  ];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -37,13 +43,19 @@ class _NoteWidgetState extends State<NoteWidget> {
               Container(
                 height: 10,
               ),
-              Text(
-                "Notes",
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
+              Container(
+                child: FadeAnimatedTextKit(
+                  duration: Duration(milliseconds: 1700),
+                  isRepeatingAnimation: true,
+                  text: _items,
+                  textStyle: TextStyle(
+                    fontSize: 36.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  totalRepeatCount: 12323213,
                 ),
-              )
+              ),
             ],
           ),
         ),

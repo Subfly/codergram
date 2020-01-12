@@ -43,6 +43,7 @@ class _LearnWidgetState extends State<LearnWidget> {
               Container(
                 width: MediaQuery.of(context).size.width - 250,
                 child: FadeAnimatedTextKit(
+                  duration: Duration(milliseconds: 1300),
                   isRepeatingAnimation: true,
                   text: _items,
                   textStyle: TextStyle(

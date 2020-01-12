@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:codergram/Pages/CalendarPage.dart';
 import 'package:codergram/Pages/MailPage.dart';
 import 'package:codergram/Pages/NotesPage.dart';
@@ -10,6 +11,12 @@ class MailWidget extends StatefulWidget {
 }
 
 class _MailWidgetState extends State<MailWidget> {
+  List<String> _items = [
+    "Mails",
+    "Send",
+    "Check",
+    "Organize",
+  ];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -39,13 +46,19 @@ class _MailWidgetState extends State<MailWidget> {
               Container(
                 height: 10,
               ),
-              Text(
-                "Mails",
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
+              Container(
+                child: FadeAnimatedTextKit(
+                  duration: Duration(milliseconds: 1600),
+                  isRepeatingAnimation: true,
+                  text: _items,
+                  textStyle: TextStyle(
+                    fontSize: 36.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  totalRepeatCount: 12323213,
                 ),
-              )
+              ),
             ],
           ),
         ),

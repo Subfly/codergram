@@ -48,6 +48,7 @@ class _SlackWidgetState extends State<SlackWidget> {
               Container(
                 width: MediaQuery.of(context).size.width - 250,
                 child: FadeAnimatedTextKit(
+                  duration: Duration(milliseconds: 1100),
                   isRepeatingAnimation: true,
                   text: _items,
                   textStyle: TextStyle(

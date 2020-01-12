@@ -7,74 +7,57 @@ class DrawerInside extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
-          height: 300,
+          height: MediaQuery.of(context).size.height / 10,
+        ),
+        Container(
+          margin: EdgeInsets.all(28),
+          height: 250,
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(
+              32,
+            ),
+          ),
           child: Center(
             child: Text(
               "Codergram",
-              style: TextStyle(fontSize: 46),
-            ),
-          ),
-        ),
-        InkWell(
-          onTap: () {},
-          child: Container(
-            height: 50,
-            child: Center(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(Feather.star),
-                  Container(
-                    width: 10,
-                  ),
-                  Text("Quick Accsess"),
-                ],
+              style: TextStyle(
+                fontSize: 46,
+                color: Colors.blueGrey,
               ),
             ),
           ),
         ),
-        InkWell(
-          onTap: () {},
-          child: Container(
-            height: 50,
-            child: Center(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(Feather.info),
-                  Container(
-                    width: 10,
-                  ),
-                  Text("About"),
-                ],
-              ),
+        Container(
+          height: MediaQuery.of(context).size.height / 12,
+        ),
+        Container(
+          padding: EdgeInsets.all(16),
+          margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+          decoration: BoxDecoration(
+            color: Colors.blueGrey,
+            borderRadius: BorderRadius.circular(
+              32,
             ),
           ),
+          child: Center(
+            child: Text(
+                "An app from programmers to programmers. It is an opensource project. You can search and contribute to the project in GitHub!"),
+          ),
+        ),
+        Container(
+          height: MediaQuery.of(context).size.height / 50,
         ),
         InkWell(
           onTap: () {},
           child: Container(
-            height: 50,
-            child: Center(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(EvilIcons.pencil),
-                  Container(
-                    width: 10,
-                  ),
-                  Text("Writers"),
-                ],
+            margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+            decoration: BoxDecoration(
+              color: Color(0xFF85bb65),
+              borderRadius: BorderRadius.circular(
+                32,
               ),
             ),
-          ),
-        ),
-        InkWell(
-          onTap: () {},
-          child: Container(
             height: 50,
             child: Center(
               child: Row(
