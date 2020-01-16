@@ -31,6 +31,7 @@ dependencies:
   uuid: ^2.0.4
   path_provider: ^1.5.1
   table_calendar: ^2.2.2
+  expand_widget: ^0.2.0+2
 
 dev_dependencies:
   flutter_test:
@@ -74,5 +75,5 @@ fonts:
 flutter_native_splash:
   image: assets/images/splash.png
   color: "607d8b"
-  android_disable_fullscreen: true
+  android_disable_fullscreen: false
   fill: true

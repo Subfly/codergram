@@ -1,0 +1,52 @@
+__start:
+	la $a0, promptOne #Prompt user to enter number
+	li $v0, 4
+	syscall
+	
+	la $a0, size #Create buffer size for the incoming input and get number
+	li $a1, 20
+	li $v0, 8
+	syscall
+
+	li $v0, 0 #Reset output register
+	
+	jal recursiveSum #Function jump
+	
+	move $t0, $v0
+	
+	la $a0, result #Print to sysout "result: "
+	li $v0, 4
+	syscall
+	la $a0, ($t0)
+	li $v0, 1
+	syscall
+	
+	j Exit #Exit program
+	
+recursiveSum:
+	addi $sp, $sp, -8 #Open space in stack
+	sw $ra, ($sp) #Store registers in stack
+    	lb $s0, ($a0) #Get value from $a0
+    	beq $s0, 10, returnRecursive #Start returning value if value == "Enter (a/10)"
+    	addi $s0, $s0, -48 #Change type of value from character to integer
+	sw $s0, 4($sp)
+    	addi $a0, $a0, 1
+    	jal recursiveSum
+    	returnRecursive:
+    		lw $s0, 4($sp)
+    		add $v0, $v0, $s0
+    		lw $ra, ($sp)
+    		addi $sp, $sp, 8
+    		jr $ra
+Exit:
+	la $a0, goodbyeMessage #Print exit message
+	li $v0, 4
+	syscall
+	li $v0, 10 #Stop program
+	syscall
+	
+	.data
+size: .space 20
+promptOne: .asciiz "\nEnter number (Max length 20): "
+result: .asciiz "\nResult: "
+goodbyeMessage: .asciiz "\n\nThank you for using this very old assembly program :D"

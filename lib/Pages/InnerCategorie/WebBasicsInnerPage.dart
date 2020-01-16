@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-class GeneralPageArchitecture extends StatefulWidget {
-  final String title;
-  final IconData icon;
-  GeneralPageArchitecture({@required this.title, @required this.icon});
-  @override
-  _GeneralPageArchitectureState createState() =>
-      _GeneralPageArchitectureState();
-}
-
-class _GeneralPageArchitectureState extends State<GeneralPageArchitecture> {
+class WebBasicsInnerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "${widget.title}",
+          "Web Basics",
           style: TextStyle(color: Colors.blueGrey),
         ),
         centerTitle: true,
